@@ -1,7 +1,7 @@
-/* 1. The Beige Background */
+/* 1. The Main Background & New Modern Font */
 body {
-    background-color: #f5f2eb !important; /* The !important forces the browser to drop the old cached color */
-    font-family: 'Georgia', serif;
+    background-color: #f5f2eb; 
+    font-family: 'Arial', 'Helvetica', sans-serif; /* Switched to a clean, modern font */
     margin: 0;
     padding: 0;
 }
@@ -9,17 +9,18 @@ body {
 /* 2. The Spaced-Out Header Layout */
 .navbar {
     display: flex;
-    justify-content: space-between; /* This forces left, center, and right to the edges */
-    align-items: center; /* This perfectly centers everything vertically */
-    padding: 20px 40px;
-    background-color: #ede8dc; /* Slightly darker beige accent bar */
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 25px 0; /* Removed side padding to let the boxes stretch fully */
+    background-color: #ede8dc; 
     border-bottom: 1px solid #dfd8c8;
 }
 
-/* 3. Spacing out the pairs of links */
+/* 3. This evenly balances the links inside the left and right spaces */
 .nav-left, .nav-right {
     display: flex;
-    gap: 30px; /* This spreads "Home" and "About" apart from each other */
+    width: 25%; /* Takes up exactly a quarter of the bar on each side */
+    justify-content: space-around; /* Spreads the two words evenly inside that quarter */
 }
 
 /* 4. Title Styling */
@@ -27,6 +28,8 @@ body {
     margin: 0;
     font-size: 2rem;
     color: #33302a;
+    width: 40%; /* Keeps the title centered in the middle 40% of the bar */
+    text-align: center;
 }
 
 /* 5. Link Styling */
@@ -34,7 +37,7 @@ body {
     text-decoration: none;
     color: #5c5549;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     transition: color 0.3s ease;
 }
 

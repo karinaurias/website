@@ -1,7 +1,7 @@
-/* 1. The Main Background & New Modern Font */
+/* 1. The Main Background & Your Chosen Elegant Font */
 body {
     background-color: #f5f2eb; 
-    font-family: 'Arial', 'Helvetica', sans-serif; /* Switched to a clean, modern font */
+    font-family: 'Georgia', 'Times New Roman', serif; /* Set to Georgia */
     margin: 0;
     padding: 0;
 }
@@ -11,25 +11,23 @@ body {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    padding: 25px 0; /* Removed side padding to let the boxes stretch fully */
+    padding: 25px 40px; /* Kept wide side padding */
     background-color: #ede8dc; 
     border-bottom: 1px solid #dfd8c8;
 }
 
-/* 3. This evenly balances the links inside the left and right spaces */
+/* 3. Spacing out the pairs of links naturally */
 .nav-left, .nav-right {
     display: flex;
-    width: 25%; /* Takes up exactly a quarter of the bar on each side */
-    justify-content: space-around; /* Spreads the two words evenly inside that quarter */
+    gap: 50px; /* Spreads "Home" and "About" apart beautifully */
 }
 
-/* 4. Title Styling */
+/* 4. Title Styling - Kept strictly on ONE line */
 .navbar h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.8rem; 
     color: #33302a;
-    width: 40%; /* Keeps the title centered in the middle 40% of the bar */
-    text-align: center;
+    white-space: nowrap; /* Prevents text from breaking into lines */
 }
 
 /* 5. Link Styling */

@@ -1,44 +1,43 @@
-/* This changes the entire website background to a soft beige */
+/* 1. The Beige Background */
 body {
-    background-color: #f5f2eb; 
-    font-family: 'Georgia', serif; /* A clean, elegant font */
+    background-color: #f5f2eb !important; /* The !important forces the browser to drop the old cached color */
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
 }
 
-/* This centers the entire header block */
+/* 2. The Spaced-Out Header Layout */
 .navbar {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: #ede8dc; /* A slightly darker beige for the menu bar */
+    display: flex;
+    justify-content: space-between; /* This forces left, center, and right to the edges */
+    align-items: center; /* This perfectly centers everything vertically */
+    padding: 20px 40px;
+    background-color: #ede8dc; /* Slightly darker beige accent bar */
     border-bottom: 1px solid #dfd8c8;
 }
 
-/* This styles your main title */
-.navbar h1 {
-    margin: 0 0 15px 0;
-    font-size: 2.2rem;
-    color: #33302a; /* Soft dark brown/black instead of harsh pure black */
-}
-
-/* This centers all your links in a row */
-.nav-links {
+/* 3. Spacing out the pairs of links */
+.nav-left, .nav-right {
     display: flex;
-    justify-content: center;
-    gap: 25px; /* Adds space between each link */
+    gap: 30px; /* This spreads "Home" and "About" apart from each other */
 }
 
-/* This styles the individual links */
-.nav-links a {
+/* 4. Title Styling */
+.navbar h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #33302a;
+}
+
+/* 5. Link Styling */
+.navbar a {
     text-decoration: none;
-    color: #5c5549; /* Elegant muted brown for the links */
+    color: #5c5549;
     font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
-/* This makes the links change color when you hover over them */
-.nav-links a:hover {
-    color: #000000; 
+.navbar a:hover {
+    color: #000000;
 }
-

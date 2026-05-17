@@ -16,10 +16,11 @@ body {
     border-bottom: 1px solid #dfd8c8;
 }
 
-/* 3. Spacing out the pairs of links naturally */
+/* 3. This spreads the links perfectly across the empty space */
 .nav-left, .nav-right {
     display: flex;
-    gap: 50px; /* Spreads "Home" and "About" apart beautifully */
+    width: 30%; /* Gives them a bit more horizontal breathing room */
+    justify-content: space-around; /* Spreads the two words evenly inside that space */
 }
 
 /* 4. Title Styling - Kept strictly on ONE line */

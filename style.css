@@ -26,7 +26,7 @@ body {
 /* 4. Title Styling - Kept strictly on ONE line */
 .navbar h1 {
     margin: 0;
-    font-size: 1.8rem; 
+    font-size: 2.0rem; 
     color: #33302a;
     white-space: nowrap; /* Prevents text from breaking into lines */
 }

@@ -14,6 +14,11 @@ body {
     padding: 25px 40px; /* Kept wide side padding */
     background-color: #ede8dc; 
     border-bottom: 1px solid #dfd8c8;
+
+    /* ADD THESE TWO LINES TO LOCK IT */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* This ensures it stays on top of your content as you scroll */
 }
 
 /* 3. This spreads the links perfectly across the empty space */

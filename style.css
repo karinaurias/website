@@ -48,3 +48,26 @@ body {
 .navbar a:hover {
     color: #000000;
 }
+
+
+/* --- MOBILE LAYOUT RULES --- */
+/* This rule only kicks in if someone is viewing on a screen narrower than 768px (like a phone) */
+@media (max-width: 768px) {
+    
+    .navbar {
+        flex-direction: column; /* Stacks the links below your title instead of side-by-side */
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem; /* Shrinks your title slightly so it fits beautifully on small screens */
+        width: 100%;
+    }
+
+    .nav-left, .nav-right {
+        width: 100%; /* Lets the links use the full width of the phone screen */
+        justify-content: center; 
+        gap: 30px; /* Gives them a neat, comfortable gap */
+    }
+}

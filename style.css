@@ -1,27 +1,44 @@
+/* This changes the entire website background to a soft beige */
+body {
+    background-color: #f5f2eb; 
+    font-family: 'Georgia', serif; /* A clean, elegant font */
+    margin: 0;
+    padding: 0;
+}
+
+/* This centers the entire header block */
 .navbar {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #ede8dc; /* A slightly darker beige for the menu bar */
+    border-bottom: 1px solid #dfd8c8;
+}
+
+/* This styles your main title */
+.navbar h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.2rem;
+    color: #33302a; /* Soft dark brown/black instead of harsh pure black */
+}
+
+/* This centers all your links in a row */
+.nav-links {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 40px;   /* space between items */
-    background-color:  #F8F9F4 ;
-    padding: 20px;
+    gap: 25px; /* Adds space between each link */
 }
 
-.navbar a {
-    color: black;
+/* This styles the individual links */
+.nav-links a {
     text-decoration: none;
-    font-size: 20px;   /* makes tabs bigger */
+    color: #5c5549; /* Elegant muted brown for the links */
     font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+/* This makes the links change color when you hover over them */
+.nav-links a:hover {
+    color: #000000; 
 }
-
-.navbar h1 {
-    color: black;
-    font-size: 28px;
-    margin: 0;
-}
-
 

@@ -50,24 +50,29 @@ body {
 }
 
 
+
 /* --- MOBILE LAYOUT RULES --- */
-/* This rule only kicks in if someone is viewing on a screen narrower than 768px (like a phone) */
 @media (max-width: 768px) {
     
+    /* 1. Stacks the title on top and links on the bottom */
     .navbar {
-        flex-direction: column; /* Stacks the links below your title instead of side-by-side */
+        flex-direction: column; 
         gap: 15px;
         padding: 20px 10px;
     }
 
+    /* 2. Centers the title text on the small screen */
     .navbar h1 {
-        font-size: 1.5rem; /* Shrinks your title slightly so it fits beautifully on small screens */
+        font-size: 1.6rem; 
         width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
     }
 
+    /* 3. Forces both link containers to stack and line up identically */
     .nav-left, .nav-right {
-        width: 100%; /* Lets the links use the full width of the phone screen */
+        width: 100%; 
         justify-content: center; 
-        gap: 30px; /* Gives them a neat, comfortable gap */
+        gap: 25px; /* Creates an even, clean space between every word */
     }
 }

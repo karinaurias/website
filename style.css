@@ -121,12 +121,18 @@ body {
     text-align: center !important;
 }
 
-/* --- Adjust Only the Plebe Year Photo Size --- */
+/* --- Focus and Zoom strictly on the Plebe Year Photo --- */
 .photo-gallery .plebe-frame img {
-    width: 100% !important;        /* Keeps it filling the width of its frame */
-    height: 350px !important;       /* CHANGE THIS NUMBER to adjust the height! */
-    object-fit: cover !important;   /* Keeps it crisp without stretching distortion */
-    object-position: 50% 15% !important; /* Adjusts the camera angle up or down */
+    width: 100% !important;        
+    height: 350px !important;       
+    object-fit: cover !important;   
+    
+    /* 1. This zooms into the photo (1.5 means 150% closer) */
+    transform: scale(1.5) !important;       
+    
+    /* 2. This aims the camera lens (Horizontal % | Vertical %) */
+    /* 50% centers it left-to-right. Lowering the second number moves the frame UP toward your face */
+    transform-origin: 50% 18% !important;  
 }
 /* ==========================================
    MOBILE DESIGN OVERRIDE

@@ -78,57 +78,67 @@ body {
 }
 
 
-
-/* --- 4-Year Photo Gallery Grid Layout --- */
+/* ==========================================
+   WIDER 4-YEAR GALLERY DESIGN (DESKTOP)
+   ========================================== */
 .photo-gallery {
-    display: flex !important;    /* Forces items to line up horizontally */
-    flex-direction: row;         /* Left-to-right alignment for desktop */
-    justify-content: center;     /* Centers the entire grid horizontally on the screen */
-    align-items: flex-start;     /* Aligns the tops of the figures perfectly */
-    gap: 25px;                   /* Clean, even spacing between columns */
-    max-width: 1100px;           /* Prevents the grid from spreading too wide */
-    margin: 50px auto;           /* Centers the whole block and adds space below the navbar */
-    padding: 0 20px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 30px !important;            /* Nice wide separation between frames */
+    max-width: 1200px !important;    /* Allows the cards to expand nicely */
+    margin: 60px auto !important;    /* Separates them safely below the navbar */
+    padding: 0 20px !important;
 }
 
 .photo-gallery figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;         /* Centers the text right under the image */
-    width: 22%;                  /* Balances all 4 columns evenly */
-    margin: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 23% !important;           /* Makes each card significantly wider */
+    margin: 0 !important;
+    overflow: hidden !important;     /* Keeps cropped picture edges perfectly inside the border */
 }
 
 .photo-gallery img {
-    width: 100%;                 /* Forces the image to fill its column box */
-    height: 320px;               /* Adjust this number if you want them taller or shorter! */
-    object-fit: cover;           /* CRITICAL: Makes all photos the exact same size without stretching */
-    border-radius: 8px;          /* Clean, slightly rounded aesthetic corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft, professional depth shadow */
+    width: 100% !important;
+    height: 350px !important;        /* Premium boxier proportion */
+    object-fit: cover !important;
+    border-radius: 12px !important;  /* Smoother, high-end corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* --- Smart Zoom Focus for Plebe Year Photo --- */
+.photo-gallery .plebe-frame img {
+    transform: scale(1.35) !important;       /* Magnifies the photo to bring you closer */
+    transform-origin: 50% 28% !important;   /* Centers the camera lens on your upper uniform */
 }
 
 .photo-gallery figcaption {
-    margin-top: 12px;
-    font-size: 1.1rem;
-    color: #5c5549;              /* Matches your soft dark-brown text theme */
-    font-weight: 500;
-    text-align: center;
+    margin-top: 14px !important;
+    font-size: 1.15rem !important;
+    color: #5c5549 !important;
+    font-weight: 500 !important;
+    text-align: center !important;
 }
 
-/* --- Mobile View Responsiveness --- */
+/* ==========================================
+   MOBILE DESIGN OVERRIDE
+   ========================================== */
 @media (max-width: 768px) {
     .photo-gallery {
-        flex-direction: column;  /* Stacks them into a gorgeous vertical timeline on phones */
-        align-items: center;     /* Centers the timeline on mobile screens */
-        gap: 35px;
-        margin: 20px auto;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 40px !important;
     }
     
     .photo-gallery figure {
-        width: 80%;              /* Gives the images a neat, comfortable width on phones */
+        width: 80% !important;
     }
     
-    .photo-gallery img {
-        height: 300px;           /* Slightly shorter height so it fits nicely on a phone screen */
+    /* Disables zoom engine on mobile screens so it scales perfectly */
+    .photo-gallery .plebe-frame img {
+        transform: none !important;
     }
 }

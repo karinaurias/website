@@ -121,6 +121,13 @@ body {
     text-align: center !important;
 }
 
+/* --- Adjust Only the Plebe Year Photo Size --- */
+.photo-gallery .plebe-frame img {
+    width: 100% !important;        /* Keeps it filling the width of its frame */
+    height: 350px !important;       /* CHANGE THIS NUMBER to adjust the height! */
+    object-fit: cover !important;   /* Keeps it crisp without stretching distortion */
+    object-position: 50% 15% !important; /* Adjusts the camera angle up or down */
+}
 /* ==========================================
    MOBILE DESIGN OVERRIDE
    ========================================== */

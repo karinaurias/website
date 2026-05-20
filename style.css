@@ -86,9 +86,9 @@ body {
     flex-direction: row !important;
     justify-content: center !important;
     align-items: flex-start !important;
-    gap: 30px !important;            /* Nice wide separation between frames */
-    max-width: 1200px !important;    /* Allows the cards to expand nicely */
-    margin: 60px auto !important;    /* Separates them safely below the navbar */
+    gap: 30px !important;            /* Clean separation between columns */
+    max-width: 1200px !important;    /* Allows the cards to expand beautifully */
+    margin: 60px auto !important;    /* Keeps layout safely under the navbar */
     padding: 0 20px !important;
 }
 
@@ -96,23 +96,23 @@ body {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    width: 23% !important;           /* Makes each card significantly wider */
+    width: 23% !important;           /* Premium wide column formatting */
     margin: 0 !important;
-    overflow: hidden !important;     /* Keeps cropped picture edges perfectly inside the border */
+    overflow: hidden !important;     /* CRITICAL: Clips zoomed image overflow cleanly */
+    border-radius: 12px !important;  /* Locks rounded corners onto the frame container */
 }
 
 .photo-gallery img {
     width: 100% !important;
-    height: 350px !important;        /* Premium boxier proportion */
+    height: 350px !important;        /* Boxier modern proportions */
     object-fit: cover !important;
-    border-radius: 12px !important;  /* Smoother, high-end corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
 }
 
-/* --- Smart Zoom Focus for Plebe Year Photo --- */
+/* --- Sharp Zoom Focus Engine for Plebe Year Photo --- */
 .photo-gallery .plebe-frame img {
-    transform: scale(1.35) !important;       /* Magnifies the photo to bring you closer */
-    transform-origin: 50% 28% !important;   /* Centers the camera lens on your upper uniform */
+    transform: scale(1.3) !important;        /* Smooth 130% magnification scale */
+    transform-origin: 50% 22% !important;    /* Precise vertical lens adjustment to prioritize uniform */
 }
 
 .photo-gallery figcaption {
@@ -137,7 +137,7 @@ body {
         width: 80% !important;
     }
     
-    /* Disables zoom engine on mobile screens so it scales perfectly */
+    /* Disables scaling translations on narrow screens for native rendering */
     .photo-gallery .plebe-frame img {
         transform: none !important;
     }

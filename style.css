@@ -79,16 +79,16 @@ body {
 
 
 /* ==========================================
-   WIDER 4-YEAR GALLERY DESIGN (DESKTOP)
+   PERFECTED 4-YEAR GALLERY DESIGN
    ========================================== */
 .photo-gallery {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
     align-items: flex-start !important;
-    gap: 30px !important;            /* Clean separation between columns */
-    max-width: 1200px !important;    /* Allows the cards to expand beautifully */
-    margin: 60px auto !important;    /* Keeps layout safely under the navbar */
+    gap: 30px !important;            /* Clean, modern gap between frames */
+    max-width: 1200px !important;    /* Keeps the row perfectly proportioned */
+    margin: 60px auto !important;    /* Safe margins below the navbar */
     padding: 0 20px !important;
 }
 
@@ -96,23 +96,21 @@ body {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    width: 23% !important;           /* Premium wide column formatting */
+    width: 23% !important;           /* Perfectly matches all 4 column widths */
     margin: 0 !important;
-    overflow: hidden !important;     /* CRITICAL: Clips zoomed image overflow cleanly */
-    border-radius: 12px !important;  /* Locks rounded corners onto the frame container */
 }
 
 .photo-gallery img {
     width: 100% !important;
     height: 350px !important;        /* Boxier modern proportions */
-    object-fit: cover !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+    object-fit: cover !important;    /* Standardizes crops across all images */
+    border-radius: 12px !important;  /* Perfectly uniform rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important; /* Elegant subtle shadow */
 }
 
-/* --- Sharp Zoom Focus Engine for Plebe Year Photo --- */
+/* --- Clean Native Shift for Plebe Photo (No Pixelated Zoom) --- */
 .photo-gallery .plebe-frame img {
-    transform: scale(1.3) !important;        /* Smooth 130% magnification scale */
-    transform-origin: 50% 22% !important;    /* Precise vertical lens adjustment to prioritize uniform */
+    object-position: 50% 15% !important; /* Slides the photo up to center on your uniform */
 }
 
 .photo-gallery figcaption {
@@ -135,10 +133,5 @@ body {
     
     .photo-gallery figure {
         width: 80% !important;
-    }
-    
-    /* Disables scaling translations on narrow screens for native rendering */
-    .photo-gallery .plebe-frame img {
-        transform: none !important;
     }
 }
